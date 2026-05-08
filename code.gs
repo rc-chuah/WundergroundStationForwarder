@@ -1519,10 +1519,9 @@ function updateNuvoler_() {
   if (conditions.humidity != null) request += '&rh=' + conditions.humidity;
   if (conditions.pressure != null) request += '&mslp=' + conditions.pressure.hPa;
   if (conditions.winddir != null) request += '&wind_dir=' + conditions.winddir;
-  if (conditions.windSpeed != null) request += '&wind_avg=' + convert.toFixed(conditions.windSpeed.kph, 2);
-  if (conditions.windSpeed != null) request += '&wind_min=' + convert.toFixed(conditions.windSpeed.kph * 0.8, 2);
-  if (conditions.windGust != null) request += '&wind_max=' + convert.toFixed(conditions.windGust.kph, 2);
-  if (conditions.precipRate != null) request += '&precip=' + convert.toFixed(conditions.precipRate.mm, 2);
+  if (conditions.windSpeed != null) request += '&wind_avg=' + conditions.windSpeed.kph;
+  if (conditions.windGust != null) request += '&wind_max=' + conditions.windGust.kph;
+  if (conditions.precipRate != null) request += '&precip=' + conditions.precipRate.mm;
   if (conditions.uv != null) request += '&uv=' + conditions.uv;
   if (conditions.dewpoint != null) request += '&dewpoint=' + conditions.dewpoint.c;
 
