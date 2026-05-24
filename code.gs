@@ -148,7 +148,7 @@ function Schedule() {
   if (updateWindGuru) ScriptApp.newTrigger('updateWindGuru_').timeBased().everyMinutes(1).create();
   if (updateWOWBE) ScriptApp.newTrigger('updateWOWBE_').timeBased().everyMinutes(5).create();
   if (updateTemperaturNu) ScriptApp.newTrigger('updateTemperaturNu_').timeBased().everyMinutes(1).create();
-  if (updateNuvoler) ScriptApp.newTrigger('updateNuvoler_').timeBased().everyMinutes(5).create();
+  if (updateNuvoler) ScriptApp.newTrigger('updateNuvoler_').timeBased().everyMinutes(1).create();
   if (updateCWOP) ScriptApp.newTrigger('updateCWOP_').timeBased().everyMinutes(5).create();
   console.log('Scheduled! Check Executions ☰▶ tab for status.');
   checkGithubReleaseVersion_();
