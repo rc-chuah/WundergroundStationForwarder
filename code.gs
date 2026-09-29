@@ -1385,6 +1385,7 @@ function updateWindy_() {
   if (conditions.humidity != null) request += '&humidity=' + conditions.humidity;
   if (conditions.precipLastHour != null) request += '&rainin=' + conditions.precipLastHour.in;
   if (conditions.uv != null) request += '&uv=' + conditions.uv;
+  if (conditions.solarRadiation != null) request += '&solarradiation=' + conditions.solarRadiation;
 
   let response = UrlFetchApp.fetch(request).getContentText();
 
