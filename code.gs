@@ -1296,7 +1296,7 @@ function doPost(request) {
     "c": convert.toFixed(convert.heatIndex(conditions.temp.c, conditions.humidity, 'C'), 2)
   };
   if (receivedJSON.uv != null) conditions.uv = receivedJSON.uv;
-  if (receivedJSON.light_lux != null) conditions.solarRadiation = receivedJSON.light_lux;
+  if (receivedJSON.light_lux != null) conditions.solarRadiation = convert.toFixed(convert.luxToWm2(receivedJSON.light_lux), 0);
   if (receivedJSON.rain_rate_mm_h != null) conditions.precipRate = {
     "in": convert.toFixed(convert.mmToIn(receivedJSON.rain_rate_mm_h), 3),
     "mm": convert.toFixed(receivedJSON.rain_rate_mm_h, 2)
